@@ -1,43 +1,97 @@
 # enjoy-skills
 
-Curated collection of Agent / Claude skills I built and use daily. Every skill here was extracted from a real workflow I kept coming back to.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Skills](https://img.shields.io/badge/skills-1-brightgreen)](./skills)
+[![Last release](https://img.shields.io/badge/release-v0.1.0-orange)]()
 
-**Privacy-first**: all personal paths, API keys, tokens, and identifying info are stripped before publication. If you find anything sensitive, open an issue.
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+A valuable set of skills I personally use in the AI era. Curated, not collected.
+
+These are not one-line prompts. Each skill is a workflow I keep coming back to — extracted, packaged, and shipped so others can adopt them without rebuilding from scratch.
+
+---
+
+## Why these skills?
+
+Most skill collections are mirrors of upstream. This one is different:
+
+- **Filtered by use, not by fame.** A skill only makes it here after I have used it on real work for at least a month. If it sits in my skills folder unused, it doesn't ship.
+- **Runnable without me.** No personal paths, no private API keys, no "ask Joy for the spreadsheet." Every skill works on a clean machine.
+- **Opinionated.** Generic advice is useless. Each skill has a point of view and tells you when to override it.
+- **Privacy-first**: personal paths, API keys, tokens, and identifying info are stripped before publication. If you find anything sensitive, open an issue.
+
+> **AI is a force multiplier, not a substitute for thinking.** These skills are designed to sharpen your judgment, not replace it. The best output still comes from a person who knows what they want and why.
+
+---
 
 ## Skills
 
 | Skill | What it does | When to use |
 |---|---|---|
-| [product-judgment](./skills/product-judgment) | Train product sense — the ability to make good calls about features, priorities, and real vs. fake needs | When you're a PM, founder, designer, or dev making a product call and want a thinking partner |
+| [product-judgment](./skills/product-judgment) | Build product sense — the ability to decide which features matter, which buttons users actually need, and whether a request is a real need or a "nice to have" | When you're a PM, founder, designer, or dev making a product call and want a thinking partner |
 
-## Philosophy
+More skills are in the pipeline. They ship here only after they've earned a place in my daily workflow.
 
-A skill should:
+---
 
-1. **Solve a real problem I had.** If I built it, I needed it. No "skills for skills' sake."
-2. **Not be a one-line prompt.** If the whole value is the prompt, it's not a skill — it's a one-liner. Skills are for workflows that need a framework, a checklist, or references.
-3. **Be runnable without me.** Every skill works on a clean machine. No personal paths, no private API keys, no "ask Joy for the spreadsheet."
-4. **Be opinionated.** Generic advice is useless. Each skill has a point of view.
+## Quick install
 
-## How to install
+**Prerequisites**
+
+- An agent that supports the skills standard: Claude Code, Hermes Agent, or any compatible runtime.
+- A `~/.claude/skills/` or `~/.hermes/skills/` directory. Most agents create this on first run.
+
+**Install a single skill**
 
 ```bash
-# Copy a skill into your skills directory
+# Clone the whole repo
+git clone https://github.com/Joy917/enjoy-skills.git
+cd enjoy-skills
+
+# Copy the skill you want
 cp -r skills/product-judgment ~/.hermes/skills/
 # or
 cp -r skills/product-judgment ~/.claude/skills/
 ```
 
-Most agents (Claude Code, Hermes Agent, etc.) auto-discover skills in the standard `skills/` directory under your home.
+**Install all skills**
+
+```bash
+cp -r skills/* ~/.hermes/skills/
+```
+
+Most agents auto-discover skills in the standard `skills/` directory under your home. Restart the agent to pick up new skills.
+
+---
+
+## Philosophy
+
+A skill makes the cut only if it passes all four of these:
+
+1. **Solves a real problem I had.** If I built it, I needed it. No "skills for skills' sake."
+2. **Not a one-line prompt.** If the whole value is the prompt, it's not a skill — it's a one-liner. Skills are for workflows that need a framework, a checklist, or references.
+3. **Runnable without me.** Every skill works on a clean machine. No personal paths, no private API keys, no "ask Joy for the spreadsheet."
+4. **Be opinionated.** Generic advice is useless. Each skill has a point of view.
+
+If a skill fails any of these, it stays in my local skills folder. It doesn't ship.
+
+---
 
 ## How to contribute
 
-Issues and PRs welcome. If you have a skill you've built and want to add it here:
+Issues and PRs are welcome. If you have a skill you've built and want to add it here:
 
-1. Open an issue first — describe the problem the skill solves and why it should be a skill (not a prompt).
-2. Keep the structure: `skills/<name>/SKILL.md` + optional `references/`, `scripts/`, `assets/`.
-3. Privacy check: run a grep for `/Users/<your-username>`, API keys, emails, and tokens before submitting.
+1. **Open an issue first** — describe the problem the skill solves and why it should be a skill (not a prompt).
+2. **Keep the structure** — `skills/<name>/SKILL.md` plus optional `references/`, `scripts/`, `assets/`.
+3. **Make sure your skill works on a clean machine** with no personal paths or private credentials.
+
+> This is a personal curation, not a marketplace. I'll review every submission and may decline ones that don't match the philosophy above. That's not a rejection of you — it's a refusal to dilute the signal.
+
+---
 
 ## License
 
 MIT. See [LICENSE](./LICENSE).
+
+Use it, fork it, learn from it. If you ship something inspired by these skills, I'd love to hear about it.
