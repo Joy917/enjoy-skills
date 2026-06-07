@@ -6,7 +6,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A valuable set of skills I personally use in the AI era. Curated, not collected.
+A curated set of skills I personally use in the AI era. Most are mine; some are adapted from others. All are battle-tested in my daily workflow.
 
 These are not one-line prompts. Each skill is a workflow I keep coming back to — extracted, packaged, and shipped so others can adopt them without rebuilding from scratch.
 
@@ -17,6 +17,7 @@ These are not one-line prompts. Each skill is a workflow I keep coming back to �
 Most skill collections are mirrors of upstream. This one is different:
 
 - **Filtered by use, not by fame.** A skill only makes it here after I have used it on real work for at least a month. If it sits in my skills folder unused, it doesn't ship.
+- **Honest about provenance.** Most skills in this repo are mine — built from workflows I kept coming back to. A few are inspired by or adapted from open-source work by others; when that's the case, the `SKILL.md` credits the original. Nothing is rebranded as "all original" when it isn't.
 - **Runnable without me.** No personal paths, no private API keys, no "ask Joy for the spreadsheet." Every skill works on a clean machine.
 - **Opinionated.** Generic advice is useless. Each skill has a point of view and tells you when to override it.
 - **Privacy-first**: personal paths, API keys, tokens, and identifying info are stripped before publication. If you find anything sensitive, open an issue.
